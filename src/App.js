@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GameCard from "./components/GameCard";
+import Wrapper from "./components/Wrapper";
+import gameImages from "./GameImages.json";
+
+  
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+  state = {
+    gameImages
+  };
+
+clickGame = id => {
+
+ alert('click game')
+};
+
+render() {
+  return (
+    <Wrapper>
+      <h1 className="title">Dexter And Friends2</h1>
+      {this.state.gameImages.map(
+        gameImages => (
+          <GameCard
+          clickGame={this.clickGame}
+          id={gameImages.id}
+          image={gameImages.image}
+          />
+        )
+      )}
+
+    </Wrapper>
+  );
+}
 }
 
 export default App;
