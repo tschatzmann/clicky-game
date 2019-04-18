@@ -14,7 +14,10 @@ class App extends Component {
     };
 
 
-
+  resetGame = () =>{
+    this.setState({ gameImageClicked: gameImage });
+    this.setState({score: 0,});
+  };
 
 
     clickGame = (id, click) => {
@@ -41,10 +44,9 @@ class App extends Component {
 
         }else{
             
-            this.setState({ score: 0 }) 
             alert("You lose!")
-            this.setState({ gameImageClicked: gameImage });
-            this.setState({score: 0,});
+            this.resetGame();
+
 
         } 
 
