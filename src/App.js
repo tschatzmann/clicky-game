@@ -63,7 +63,7 @@ console.log(this.state.score);
         return (
             <Wrapper>
                 {<Title> Clicky Game - Click on an Image to Begin - Score: {this.state.score}</Title>}
-                {<Instructions> Click on an image to earn points, but don't click on any more than once!  </Instructions>}
+                {<Instructions> Click on an image to earn points, but don't click on the same one twice!  </Instructions>}
                 {this.state.gameImage.map(gameImage => (
                     <GameCard
                         image={gameImage.image}
