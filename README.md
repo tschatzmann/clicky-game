@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Clicky-Game
+
+### The player select a Dexter character to get a point. The game will reschuffle the cards every time the player selects an character.  The player looses and the game resets if they click the same image twice.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
